@@ -1,5 +1,4 @@
 var myArgs = process.argv.slice(2);
-console.log('myArgs: ', myArgs);
 
 var table = {
     '0': 'Zero',
@@ -20,4 +19,7 @@ function parser(inputStr){
 }
 for (var i = 0; i < myArgs.length; i++){
     parser(myArgs[i]);
+    if (i != myArgs.length - 1){
+        process.stdout.write(', ');
+    }
 }
